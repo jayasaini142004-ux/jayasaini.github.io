@@ -1,0 +1,354 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Jaya Saini SEO Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one calm column. The hero is a search-result snippet, the work is a grid of Search Console style stat cards. */
+:root {
+  --bg: #F6F7F4;
+  --surface: #FFFFFF;
+  --fg: #16211C;
+  --muted: #5B6862;
+  --line: #DDE2DC;
+  --accent: #0F6B58;
+  --accent-ink: #FFFFFF;
+  --link: #1A55C8;
+  --serp-green: #1B7A3E;
+  --todo-bg: #FFF4D6;
+  --todo-fg: #6B4E00;
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101714; --surface: #17201C; --fg: #E8EEEA; --muted: #9AA8A1; --line: #27332D;
+    --accent: #4FC4A6; --accent-ink: #0B1511; --link: #8AB4FF; --serp-green: #6FD39A;
+    --todo-bg: #3A3015; --todo-fg: #F2D77A; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101714; --surface: #17201C; --fg: #E8EEEA; --muted: #9AA8A1; --line: #27332D;
+  --accent: #4FC4A6; --accent-ink: #0B1511; --link: #8AB4FF; --serp-green: #6FD39A;
+  --todo-bg: #3A3015; --todo-fg: #F2D77A; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 56px;
+}
+.wrap { max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 72px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.12; }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.1rem); font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 1.25rem; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--link); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.label { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.section-head { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; max-width: 62ch; }
+.section-head p { color: var(--muted); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.hero h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); font-weight: 700; letter-spacing: -0.03em; }
+.hero .role { font-size: 1.15rem; color: var(--muted); margin-top: 14px; max-width: 44ch; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn { display: inline-block; padding: 11px 18px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.ghost { border: 1px solid var(--line); color: var(--fg); background: var(--surface); }
+.serp { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; min-width: 0; }
+.serp .site { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; }
+.serp .fav { width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; flex: none; }
+.serp .site b { font-weight: 500; display: block; line-height: 1.2; }
+.serp .site span { color: var(--muted); font-size: 0.78rem; overflow-wrap: anywhere; }
+.serp .title { font-family: var(--font-body); font-size: 1.25rem; color: var(--link); margin-top: 10px; line-height: 1.3; font-weight: 500; }
+.serp .desc { color: var(--muted); font-size: 0.92rem; margin-top: 6px; }
+.serp .desc em { font-style: normal; font-weight: 600; color: var(--fg); }
+.serp .meta { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--font-mono); font-size: 0.76rem; color: var(--serp-green); }
+
+/* Work */
+.work { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.case { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.work .case:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.case header { display: flex; flex-direction: column; gap: 4px; }
+.case .url { font-family: var(--font-mono); font-size: 0.78rem; color: var(--serp-green); overflow-wrap: anywhere; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; }
+.stat { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+.stat .n { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat .k { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+.case ul { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; font-size: 0.95rem; }
+.case .note { font-size: 0.8rem; color: var(--muted); }
+.todo { background: var(--todo-bg); color: var(--todo-fg); padding: 2px 8px; border-radius: 4px; font-family: var(--font-mono); font-size: 0.78rem; }
+
+/* Services */
+.services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 32px; }
+.service { border-top: 2px solid var(--fg); padding-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+.service p { color: var(--muted); font-size: 0.95rem; }
+
+/* Process */
+.process { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); overflow: hidden; }
+.process li { padding: 18px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.process li:last-child { border-right: 0; }
+.process b { font-family: var(--font-display); font-size: 1.05rem; }
+.process span { color: var(--muted); font-size: 0.88rem; }
+
+/* Tools */
+.tools { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { font-family: var(--font-mono); font-size: 0.82rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+
+/* Samples */
+.samples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.sample { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-width: 0; }
+.sample .btn { margin-top: 6px; }
+.about { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.about p + p { margin-top: 14px; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; }
+.facts div { border-top: 2px solid var(--fg); padding-top: 10px; }
+.facts dt { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; line-height: 1.1; }
+.facts dd { margin: 4px 0 0; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+.industries { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+nav.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding: 12px max(16px, env(safe-area-inset-left, 0px)); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+nav.top .in { max-width: 1040px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+nav.top b { font-family: var(--font-display); font-size: 1.05rem; }
+nav.top ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.9rem; }
+nav.top a { color: var(--muted); text-decoration: none; font-weight: 500; }
+nav.top a:hover { color: var(--fg); }
+.sample p { color: var(--muted); font-size: 0.92rem; }
+
+/* Contact */
+.contact { background: var(--accent); color: var(--accent-ink); border-radius: 16px; padding: clamp(24px, 5vw, 48px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: center; }
+.contact h2 { color: var(--accent-ink); }
+.contact p { opacity: 0.9; margin-top: 10px; }
+.rows { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1px solid color-mix(in srgb, var(--accent-ink) 35%, transparent); border-radius: 10px; min-width: 0; }
+.row div { min-width: 0; }
+.row .label { color: inherit; opacity: 0.75; display: block; }
+.row .val { font-family: var(--font-mono); font-size: 0.92rem; overflow-wrap: anywhere; user-select: all; }
+.copy { flex: none; font: inherit; font-size: 0.8rem; font-weight: 600; cursor: pointer; background: var(--accent-ink); color: var(--accent); border: 0; border-radius: 6px; padding: 6px 12px; }
+footer { color: var(--muted); font-size: 0.82rem; }
+
+@media (max-width: 860px) {
+  .hero, .contact, .about { grid-template-columns: minmax(0, 1fr); }
+  nav.top ul { display: none; }
+  .work, .samples { grid-template-columns: minmax(0, 1fr); }
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process { grid-template-columns: minmax(0, 1fr); }
+  .process li { border-right: 0; border-bottom: 1px solid var(--line); }
+  .process li:last-child { border-bottom: 0; }
+}
+@media (max-width: 520px) {
+  .services { grid-template-columns: minmax(0, 1fr); }
+  .wrap { gap: 56px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .copy { transition: transform 0.15s ease; }
+  .btn:hover, .copy:hover { transform: translateY(-1px); }
+}
+</style>
+
+<nav class="top" aria-label="Sections">
+  <div class="in">
+    <b>Jaya Saini</b>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#samples">Samples</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap" style="margin-top:40px">
+
+  <section class="hero" id="top">
+    <div>
+      <p class="label">SEO Specialist · Panipat, India · Remote</p>
+      <h1 style="margin-top:14px">Jaya Saini</h1>
+      <p class="role">I help websites of every type get found on Google through technical SEO, content strategy and link building, tracked in Search Console and GA4.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="serp" aria-label="Search result style summary">
+      <div class="site"><div class="fav">JS</div><div><b>Jaya Saini</b><span>[your-portfolio-url] › seo-specialist</span></div></div>
+      <div class="title">Jaya Saini | SEO Specialist (Remote)</div>
+      <p class="desc"><em>3+ years</em> of experience in SEO and digital marketing. Keyword strategy, technical audits, local SEO, link building and reporting.</p>
+      <div class="meta"><span>Technical SEO</span><span>On-Page</span><span>Off-Page</span><span>Local SEO</span></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-head">
+      <p class="label">About</p>
+      <h2>SEO that is planned, tracked and explained</h2>
+    </div>
+    <div class="about">
+      <div>
+        <p>I am an SEO specialist based in India, working remotely with teams in any time zone. I have 3+ years of experience in SEO and digital marketing for websites of every type.</p>
+        <p>I start with keyword and intent research, fix the technical base, optimize pages, build authority with links and citations, then report on Search Console and GA4 data every month. Each recommendation comes with a reason and a priority.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>3+ yrs</dt><dd>SEO experience</dd></div>
+        <div><dt>Full scope</dt><dd>On-page · Off-page · Technical</dd></div>
+        <div><dt>Remote Ready</dt><dd>US &amp; UK Time Zones</dd></div>
+        <div><dt>GSC · GA4</dt><dd>Reporting stack</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="section-head">
+      <p class="label">Selected work</p>
+      <h2>Three client projects, from keyword map to Search Console results</h2>
+      <p>Client names are kept private. Numbers come from Google Search Console unless noted.</p>
+    </div>
+    <div class="work">
+
+      <article class="case">
+        <header>
+          <h3>School website, Haryana</h3>
+          <span class="url">Education SEO · local search visibility</span>
+        </header>
+        <div class="stats">
+          <div class="stat"><div class="n">292</div><div class="k">Organic clicks</div></div>
+          <div class="stat"><div class="n">3.5K</div><div class="k">Impressions</div></div>
+          <div class="stat"><div class="n">8.3%</div><div class="k">Avg. CTR</div></div>
+        </div>
+        <p class="note">Tracked over a 28-day Search Console window.</p>
+        <ul>
+          <li>Used Search Console data to find ranking opportunities, CTR gaps, indexing issues and missing content.</li>
+          <li>Ran keyword research and competitor analysis, then optimized pages and internal links around local search intent.</li>
+          <li>Tracked 15–25 priority keywords toward Top 20 and Top 10.</li>
+        </ul>
+      </article>
+
+      <article class="case">
+        <header>
+          <h3>CBSE K–12 school website, Gurgaon</h3>
+          <span class="url">Education SEO · location-focused strategy</span>
+        </header>
+        <div class="stats">
+          <div class="stat"><div class="n">16+</div><div class="k">Pages on the site</div></div>
+          <div class="stat"><div class="n">15–25</div><div class="k">Priority keywords</div></div>
+        </div>
+        <ul>
+          <li>Built a location-focused strategy for school searches across Gurgaon/Gurugram.</li>
+          <li>Optimized Home, About, Admissions, Campus Facilities, School Life and Co-Curricular pages.</li>
+          <li>Created keyword clusters, internal linking, citations and technical fixes. Goal: move rankings from Top 50 to Top 20 to Top 10.</li>
+        </ul>
+        <p><span class="todo">[Add result: keywords in Top 10, clicks growth]</span></p>
+      </article>
+
+      <article class="case">
+        <header>
+          <h3>Healthcare &amp; herbal products brand</h3>
+          <span class="url">Ayurvedic products · multi-location SEO</span>
+        </header>
+        <div class="stats">
+          <div class="stat"><div class="n">9</div><div class="k">Regions targeted</div></div>
+          <div class="stat"><div class="n">3</div><div class="k">Keyword types: commercial, product, location</div></div>
+        </div>
+        <ul>
+          <li>Targeted nine regions across Haryana, Delhi NCR and Chandigarh with dedicated location pages.</li>
+          <li>Built commercial, product and location keyword strategy and mapped each keyword to a page.</li>
+          <li>Optimized product pages: titles, meta descriptions, headings and internal links.</li>
+          <li>Planned content around local and product search intent to widen topical coverage.</li>
+        </ul>
+        <p><span class="todo">[Add result: location pages ranking, organic growth]</span></p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-head">
+      <p class="label">What I do</p>
+      <h2>End-to-end SEO, one owner</h2>
+    </div>
+    <div class="services">
+      <div class="service"><h3>Technical SEO</h3><p>Indexing, crawlability, canonicals, redirects, sitemaps, robots.txt, schema and Core Web Vitals checks.</p></div>
+      <div class="service"><h3>On-page SEO</h3><p>Titles, meta descriptions, headings, URLs, internal links and image SEO tied to one target keyword per page.</p></div>
+      <div class="service"><h3>Keyword research</h3><p>Clusters, search-intent mapping and keyword-to-page maps built from competitor and SERP analysis.</p></div>
+      <div class="service"><h3>Content strategy</h3><p>SEO briefs, topic clusters, content refreshes and gap analysis against competitors.</p></div>
+      <div class="service"><h3>Local SEO</h3><p>Google Business Profile, citations, directory listings and location-based keyword targeting.</p></div>
+      <div class="service"><h3>Link building</h3><p>Relevant outreach, business listings and resource placements, planned monthly.</p></div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="section-head">
+      <p class="label">How I work</p>
+      <h2>Five steps, repeated every month</h2>
+    </div>
+    <ol class="process">
+      <li><b>Research</b><span>Keywords, intent, competitors and SERPs.</span></li>
+      <li><b>Foundation</b><span>Indexing, structure, metadata, schema, internal links.</span></li>
+      <li><b>Content</b><span>Briefs, page optimization, refreshes.</span></li>
+      <li><b>Authority</b><span>Link building, citations, listings.</span></li>
+      <li><b>Measure</b><span>Search Console and GA4, CTR review, next month's priorities.</span></li>
+    </ol>
+  </section>
+
+  <section id="tools">
+    <div class="section-head">
+      <p class="label">Tools</p>
+      <h2>What I use every week</h2>
+    </div>
+    <div class="tools">
+      <span class="chip">Google Search Console</span><span class="chip">GA4</span><span class="chip">Ahrefs</span><span class="chip">SEMrush</span><span class="chip">Screaming Frog</span><span class="chip">Google Keyword Planner</span><span class="chip">Ubersuggest</span><span class="chip">Google Business Profile</span>
+    </div>
+  </section>
+
+  <section id="samples">
+    <div class="section-head">
+      <p class="label">Work samples</p>
+      <h2>See how I audit and track SEO</h2>
+      <p>Open the files below to see my format, depth and reporting style.</p>
+    </div>
+    <div class="samples">
+      <div class="sample"><h3>Sample SEO Audit</h3><p>A full audit with issues found, recommended fixes and priorities.</p><a class="btn ghost" href="https://docs.google.com/document/d/1DfhogrNu3dgf2Nkgqj8GC_f4Y_xpp3vufNHwMTXutuE/edit?tab=t.0#heading=h.4um4tbywwysb" target="_blank" rel="noopener">Open Google Doc</a></div>
+      <div class="sample"><h3>SEO Keyword &amp; Ranking Tracker</h3><p>Google Sheet that tracks target keywords, search intent, target pages and ranking changes.</p><a class="btn ghost" href="https://docs.google.com/spreadsheets/d/1vzXJZNsZW1dQeJKQflrlwVYxcEtMOsroUlEAEXReWEU/edit?usp=sharing" target="_blank" rel="noopener">Open Google Sheet</a></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div>
+      <h2>Open to remote SEO roles with US and UK teams</h2>
+      <p>Full-time, with working-hour overlap for US and UK time zones.</p>
+    </div>
+    <div class="rows">
+      <div class="row"><div><span class="label">Email</span><span class="val" id="v-email">jayasaini3114@gmail.com</span></div><button class="copy" type="button" data-target="v-email">Copy</button></div>
+      <div class="row"><div><span class="label">Phone</span><span class="val" id="v-phone">+91 74044 53275</span></div><button class="copy" type="button" data-target="v-phone">Copy</button></div>
+      <div class="row"><div><span class="label">LinkedIn</span><span class="val" id="v-li">[your LinkedIn URL]</span></div><button class="copy" type="button" data-target="v-li">Copy</button></div>
+    </div>
+  </section>
+
+  <footer>Jaya Saini · SEO Specialist · Panipat, Haryana, India</footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.getAttribute('data-target'));
+    var text = el.textContent;
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1500); }
+    function select() {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    }
+    try {
+      navigator.clipboard.writeText(text).then(done, select);
+    } catch (e) { select(); }
+  });
+});
+</script>
+
+</body></html>
